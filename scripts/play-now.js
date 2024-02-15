@@ -1,3 +1,9 @@
+function handleKeyboardButtonPress(){
+    console.log('button pressed')
+}
+
+document.addEventListener('keyup',handleKeyboardButtonPress);
+
 function gameLoop(){
     // Generate a random letter
     const letter = getARandomLetter();
