@@ -22,3 +22,19 @@ function setBackgroundColorById(elementId){
     const element = document.getElementById(elementId);
     element.classList.add('bg-orange-400');
 }
+function removeBackgroundColorById(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.remove('bg-orange-400');
+}
+
+
+// Score Update function
+function scoreUpdater(){
+    let scoreText = document.getElementById('score-value').innerText;
+    console.log(scoreText);
+    let score = parseInt(scoreText);
+    console.log(score);
+    score++;
+    console.log(score);
+    document.getElementById('score-value').innerText = score.toString();
+}

@@ -1,5 +1,20 @@
-function handleKeyboardButtonPress(){
-    console.log('button pressed')
+function handleKeyboardButtonPress(event){
+    const playerPressed = event.key;
+    // Get the letter in screen
+    const currentLetterElement = document.getElementById('screen-letter');
+    const expectedLetter = currentLetterElement.innerText.toLowerCase();
+
+
+    if(playerPressed === expectedLetter){
+        console.log('You win the game.')
+        removeBackgroundColorById(expectedLetter);
+        // Score Update
+        scoreUpdater();
+        gameLoop();
+    } else{
+        
+        console.log('You lost the game')
+    }
 }
 
 document.addEventListener('keyup',handleKeyboardButtonPress);
@@ -7,10 +22,9 @@ document.addEventListener('keyup',handleKeyboardButtonPress);
 function gameLoop(){
     // Generate a random letter
     const letter = getARandomLetter();
-    console.log('your random letter is : ', letter)
     // set Randomly generated alphabet to screen
-    const currentLetter = document.getElementById('screen-letter');
-    currentLetter.innerText = letter;
+    const currentLetterElement = document.getElementById('screen-letter');
+    currentLetterElement.innerText = letter;
 
     // setBackground color of the text
     setBackgroundColorById(letter);
