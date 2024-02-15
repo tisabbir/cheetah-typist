@@ -38,3 +38,12 @@ function scoreUpdater(){
     console.log(score);
     document.getElementById('score-value').innerText = score.toString();
 }
+function lifeUpdater(){
+    let lifeText = document.getElementById('life-value').innerText;
+    console.log(lifeText);
+    let life = parseInt(lifeText);
+    console.log(life);
+    life--;
+    console.log(life);
+    document.getElementById('life-value').innerText = life.toString();
+}

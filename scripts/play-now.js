@@ -12,7 +12,7 @@ function handleKeyboardButtonPress(event){
         scoreUpdater();
         gameLoop();
     } else{
-        
+        lifeUpdater();
         console.log('You lost the game')
     }
 }
