@@ -31,19 +31,15 @@ function removeBackgroundColorById(elementId){
 // Score Update function
 function scoreUpdater(){
     let scoreText = document.getElementById('score-value').innerText;
-    console.log(scoreText);
     let score = parseInt(scoreText);
-    console.log(score);
     score++;
-    console.log(score);
     document.getElementById('score-value').innerText = score.toString();
 }
 function lifeUpdater(){
     let lifeText = document.getElementById('life-value').innerText;
-    console.log(lifeText);
     let life = parseInt(lifeText);
-    console.log(life);
     life--;
-    console.log(life);
     document.getElementById('life-value').innerText = life.toString();
+    return life;
 }
+
